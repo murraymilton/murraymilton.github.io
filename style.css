@@ -1,0 +1,54 @@
+
+h1{
+    font-size: large;
+    font-family: sans-serif;  /*Name heading*/
+    color :aqua
+}
+p{
+    font-size:large;
+    font-family: sans-serif;
+}
+
+h3{ font-size: large;
+    font-family: sans-serif;
+
+}
+p{
+    font-size: medium;
+    font-family: sans-serif;
+
+}
+ul{
+    font-size: medium;
+    font-family: sans-serif;
+}
+h3{
+    font-size: medium;
+    font-family: sans-serif;
+}
+ol{
+    font-size: medium;
+    font-family: sans-serif;
+}
+
+/*Menu Bar*/
+.Navbar{
+    float: left;
+    background-color: black;
+    overflow: hidden;
+}
+/* Style for the inside navigation bar*/
+.Navbar a{
+    float: left;
+    color:  aqua;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    
+}
+/*Color change hover over nav bar links*/
+.Navbar a:hover {
+    background-color: antiquewhite;
+    color: black;
+}
