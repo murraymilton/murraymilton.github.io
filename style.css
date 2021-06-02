@@ -1,54 +1,264 @@
+@import url('https://fonts.googleeapis.com/css?family=Montserrat:500');
 
-h1{
-    font-size: large;
-    font-family: sans-serif;  /*Name heading*/
-    color :aqua
-}
-p{
-    font-size:large;
-    font-family: sans-serif;
+
+
+
+/*Custom Design Setting for our properties, wiill update as needed for styling*/
+:root{
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+    --clr-light: #fff;
+    --clr-dark:#303030;
+    --clr-accent: #16e0bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,15)
+
+
 }
 
-h3{ font-size: large;
-    font-family: sans-serif;
+@media (min-width: 800px){
+    :root{
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3:1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
 
+body{
+    background: var(--clr-light);
+    /*Will use to insert highlight points */
+    color:var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height:1.6 ;
 }
-p{
-    font-size: medium;
-    font-family: sans-serif;
+section{
+    padding:5em 2em;
+}
 
+img{
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: scale-down;
 }
-ul{
-    font-size: medium;
-    font-family: sans-serif;
+
+strong{
+    font-weight: var(--fw-bold);
 }
+/*Typography*/
+
+h1,
+h2,
 h3{
-    font-size: medium;
-    font-family: sans-serif;
-}
-ol{
-    font-size: medium;
-    font-family: sans-serif;
+    line-height: 1.1;
+    margin:0;
 }
 
-/*Menu Bar*/
-.Navbar{
-    float: left;
-    background-color: black;
-    overflow: hidden;
+h1{font-size: var(--fs-h1);}
+h2{font-size: var(--fs-h2);}
+h3{font-size: var(--fs-h3);}
+
+.section__head{
+    margin-bottom: .23em;
+
 }
-/* Style for the inside navigation bar*/
-.Navbar a{
-    float: left;
-    color:  aqua;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    
+.section__head--intro{
+    margin: 0;
+    font-size:var(--fs-h3);
+
 }
-/*Color change hover over nav bar links*/
-.Navbar a:hover {
-    background-color: antiquewhite;
+
+.section__head--intro strong{
+    display: block;
+}
+
+.section__subtitle--intro,
+.section__subtitle--about{
+    background: #00afb9;
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom:1em ;
+}
+
+/*Introduction Section*/
+.intro{
+    position:relative;
+}
+
+.intro__img{
+    box-shadow: var(--bs) ;
+}
+
+@media (min-width:600px){
+    .intro{
+        display: grid;
+        width:min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas:
+         "img head"
+         "img subtitle";
+         grid-template-columns:min-content max-content ;
+    }
+    .intro__img{
+        grid-area: img;
+        min-width:250px;
+        position: relative;
+        z-index: 2;
+    }
+    .section__subtitle--intro{
+       align-self: start;
+       grid-column: -1/1;
+       grid-row: 2;
+       text-align: right;
+       position: relative;
+       left: -1.5em;
+       width:calc(100% + 1.5em);
+    }
+}
+
+
+/*Services Offered projects*/
+.my-services{
+    background:var(--clr-dark);
+    background-image:url();
+    color:var(--clr-light);
+}
+
+
+
+
+.about-me{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+@media (min-width: 600px){
+    .about-me{
+        display: grid;
+        grid-template-columns: 1fr 200px;
+}
+
+
+
+/*Footer*/
+
+
+
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
     color: black;
+    text-decoration: none;
 }
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+/*Logo?*/
+.logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.Navbar{
+    order: 1;
+}
+
+.Navbar{
+    list-style: none;
+}
+
+
+.Navbar li{
+    display: inline;
+    padding: 0px 20px;
+}
+.Navbar li a{
+    transition: all 0.3s ease 0s;
+}
+.Navbar li a:hover{
+    color: var(--clr-accent);
+}
+
+button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color:#00afb9;
+    border: none;
+    border-radius: 50px;
+    cursor:pointer ;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+background-color: #00afb9; 
+}
+/*Background color */
+/* body{
+    background: #e4efe7;
+    margin:0 ; */
+    
+/* } */
+
+
+
+    
+
+/*Image resizing*/
+img.resize{
+    max-width: 25%;
+    max-height: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .name{
+    background-color:#94d0cc ;
+    /* margin: 0px; 
+    border: none; 
+    border-width: 0;
+    padding: 2px;  */
+    /* text-align: center; 
+    margin: 0 auto 0 auto;
+} */ */
+
