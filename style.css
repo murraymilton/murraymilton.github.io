@@ -24,6 +24,14 @@
 
 
 }
+/*Edits to the body of HTML for social media icons*/
+html,body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: linear-gradient(315deg, #ffffff, #00afb9);
+}
 
 @media (min-width: 800px){
     :root{
